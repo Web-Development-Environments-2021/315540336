@@ -2,7 +2,8 @@
 <html>
 <head>
 <link rel="stylesheet" type="text/css" href="style.css" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset='utf-8'>
+<meta name="viewport" content="width=device-width, initial-scale=1.0" >
 <script type ="text/javascript" src ="demo.js"></script>
 <link rel="shortcut icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSLQXPRTJGjDpq_HuAJaSptK9rH1HWu7X496A&usqp=CAU" type="image/x-icon"/>
 <title>Tuvia Tzafir</title>
@@ -91,7 +92,7 @@
     </tr>
     <tr>
       <td>
-        <iframe src="https://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fwww.facebook.com%2Fbgu.uni&width=62&layout=box_count&action=like&size=small&share=true&height=65&appId" width="62" height="65" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+        <iframe src="https://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fweb-development-environments-2021.github.io%2Fassignment1-noaai%2F&width=74&layout=box_count&action=like&size=large&share=true&height=65&appId" width="74" height="65" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
       </td>
         <td> <button class= "button"><span>Like</span></button>
       </td>
@@ -133,25 +134,25 @@
     <!--<div class="contact-pic">
       <img src="img-01.png" alt="IMG">
     </div>-->
-    <form class="contact1-form ">
+    <form class="contact1-form" action="mailto:noaai@post.bgu.ac.il" method="POST" enctype="text/plain">
       <!--<span class="contact1-form-title">
         Get in touch
       </span>-->
       <div class="wrap-input1 ">
         <label>First Name</label>
-        <input class="input1" type="text"  placeholder="Name">
+        <input class="input1" type="text" id = "fname" name ="Firstname" placeholder="Name">
       </div>
       <div class="wrap-input1">
         <label>Last Name</label>
-        <input class="input1" type="text" placeholder="Last Name">
+        <input class="input1" id = "lname" name ="Lasttname" type="text" placeholder="Last Name">
       </div>
       <div class="wrap-input1">
         <label>Email</label>
-        <input class="input1" type="text" placeholder="Email">
+        <input class="input1" id = "mail" name ="MyMail" type="text" placeholder="Email">
       </div>
       <div class="wrap-input1">
         <label>Choose a Smily</label>
-        <select id="smile" onChange = funcSel()>
+        <select id="smile"  onChange = funcSel()>
           <option value="1">😀</option>
           <option value="2">😇</option>
           <option value="3">🤩</option>
@@ -163,10 +164,11 @@
       </div>
       <div class="wrap-input1" >
         <label for= "msg">Your Message</label></br>
-        <textarea id = "msgSmile" class="input1" placeholder="Message"></textarea>
+        <textarea id = "msgSmile" name ="Message" class="input1" placeholder="Message" 
+        data-emoji-input="unicode" data-emojiable="true"></textarea>
       </div>
       <div class="container-contact1-form-btn">
-        <button id ="btn" class="contact1-form-btn" onClick =funSumbit()>
+        <button id ="btn" class="contact1-form-btn" value="Send" onClick ="setTimeout(funSumbit, 100)">
         <span>
           Send Email
         </span>

@@ -379,3 +379,17 @@ button {
   }
  
   
+
+
+  .lead.emoji-picker-container {
+    width: 300px;
+    display: block;
+    input {
+      width: 100%;
+      height: 50px;
+    }
+  }
+}
+
+
+  
