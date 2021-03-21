@@ -360,14 +360,17 @@ button {
 
  #like{
 	text-align: center;
-	width: 100%;
 	border-spacing: 30px;
 	
 
   }
-  #like table{
-	background:#009bff;
-	background: -webkit-linear-gradient(left, #0072ff, #00c6ff);
+
+  .like table{
+	display: inline-block;
+	bottom: 0px;
+
+	
+
   }
 
   .wordlike{
@@ -380,15 +383,23 @@ button {
  
   
 
+.meLike{
+	background:#009bff;
+	background: -webkit-linear-gradient(left, #0072ff, #00c6ff);
+	width: 100%;
+ 
+}
+#like tr td img{
+	width:100px;
+	height:100px;
+	position: relative;
+   
 
-  .lead.emoji-picker-container {
-    width: 300px;
-    display: block;
-    input {
-      width: 100%;
-      height: 50px;
-    }
-  }
+}
+
+#qrcoder{
+	text-align: center;
+
 }
 
 
