@@ -2,7 +2,7 @@ html{
 	background-color: white;
 }
 
-
+ /*menu*/
 #menu
 {
 	position: fixed;
@@ -43,7 +43,7 @@ html{
 	font-size: 2em;
 	font-weight: 800;
 	overflow: hidden;
-	background: linear-gradient(to right, rgb(6, 98, 121), midnightblue 50%, rgb(255, 255, 255) 50%);
+	background: linear-gradient(to right, midnightblue, midnightblue 50%, rgb(255, 255, 255) 50%);
 	background-clip: text;
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
@@ -64,6 +64,12 @@ html{
 
 }
 
+.partofmenu{
+	color:white;
+	font-family:cursive;
+	font-size: 20px;
+  }
+
 @media screen and (max-width:1000px) and (min-width:700px) {
 	#menu ul li a{
 		font-size: 16px;
@@ -80,6 +86,9 @@ html{
 	background-position: 0 100%;
   }
 
+
+ /*title*/
+
 .line span{
   background: #fff;
   padding: 0 10px ;
@@ -94,9 +103,6 @@ html{
                0 4px 0 #b9b9b9,
                0 5px 0 #aaa,
                0 6px 1px rgba(0,0,0,.1),
-               0 0 5px rgba(0,0,0,.1),
-               0 1px 3px rgba(0,0,0,.3),
-               0 3px 5px rgba(0,0,0,.2),
                0 5px 10px rgba(0,0,0,.25),
                0 10px 10px rgba(0,0,0,.2),
                0 20px 20px rgba(0,0,0,.15);
@@ -104,22 +110,21 @@ html{
 }
 
 
-
+ /*for the line*/
 
 h1{
 
-  position: relative;
-  margin-top: 20px;
-  font-family: sans-serif;
-  text-align: center;
-  background-color: #3aafd3;
-  height:10px;
-  }
+	position: relative;
+	margin-top: 20px;
+	font-family: sans-serif;
+	text-align: center;
+	background-color: #3aafd3;
+	height:10px;
+	}
  
 
  /*para start*/
  
-  
   #explainTuvia{
 	  height:150px;
 	  padding: 40px;
@@ -139,15 +144,15 @@ h1{
 	}
   }
 
-
 @media screen and (max-width: 600px) {
 	#explainTuvia {
-    
 	height:800px;
   }
 }
 
-  h2{
+/*Name of Tuvia Tzafir*/
+
+h2{
 	position:relative;
     box-sizing: border-box;
     padding-bottom: 0px;
@@ -158,14 +163,7 @@ h1{
 	font-family:sans-serif;
   }
 
-  .partofmenu{
-	color:white;
-	font-family:cursive;
-	font-size: 20px;
-  }
-
-
-/*gallery*/
+/*---------------------gallery------------------------*/
 
 
 * {
@@ -187,6 +185,24 @@ h1{
 	border:rgb(6, 98, 121) solid;
 	height:600px;
   }
+  .row {
+	display: flex;
+	-ms-flex-wrap: wrap; 
+	flex-wrap: wrap;
+	padding: 0 4px;
+  }
+   
+  .column img:hover {
+	-webkit-filter:contrast(160%);
+  }
+  
+  /* photos*/
+  .column iframe{
+	margin-top: 8px;
+	vertical-align: middle;
+	width: 100%;
+	border:rgb(6, 98, 121) solid;
+  }
   
 
   @media screen and (max-width: 800px) {
@@ -197,7 +213,6 @@ h1{
 	}
   }
   
-  /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
   @media screen and (max-width: 600px) {
 	.column {
 	  -ms-flex: 100%;
@@ -205,43 +220,12 @@ h1{
 	  max-width: 100%;
 	}
   }
-  .row {
-	display: -ms-flexbox; /* IE10 */
-	display: flex;
-	-ms-flex-wrap: wrap; /* IE10 */
-	flex-wrap: wrap;
-	padding: 0 4px;
-  }
-
   
-  .column img:hover {
-	-webkit-filter:contrast(160%);
-  }
-
-
-  /* photos*/
-  .column iframe{
-	margin-top: 8px;
-	vertical-align: middle;
-	width: 100%;
-	border:rgb(6, 98, 121) solid;
-  }
-
-
 /*---------------------form------------------------*/
 button {
 	outline: none ;
 	border: none;
 	background: transparent;
-}
-
-
-.container-contact1-form-btn {
-	display: flex;
-	justify-content: center;
-  }
-  
-  .contact1-form-btn {
 	min-width: 193px;
 	height: 50px;
 	border-radius: 25px;
@@ -249,10 +233,6 @@ button {
 	font-family:cursive;
 	font-size: 15px;
 	color: #fff;
-	display: -webkit-box;
-	display: -webkit-flex;
-	display: -moz-box;
-	display: -ms-flexbox;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -262,13 +242,19 @@ button {
 	-o-transition: all 0.4s;
 	-moz-transition: all 0.4s;
 	transition: all 0.4s;
+}
+
+.form-btn {
+	display: flex;
+	justify-content: center;
+	margin-top: 20px;
   }
   
-  .contact1-form-btn:hover {
+  #btn:hover {
 	background: #333333;
   }
   
-  .contact1-form-btn:hover i {
+  #btn:hover i {
 	-webkit-transform: translateX(10px);
 	-moz-transform: translateX(10px);
 	-ms-transform: translateX(10px);
@@ -276,10 +262,6 @@ button {
 	transform: translateX(10px);
   }
   
-  
-  /*----------------------pic-----------------------*/
-
-
   /*----------------------background-----------------------*/
 
   .contact-form{
@@ -291,7 +273,6 @@ button {
 	  align-items: center;
 	  justify-content:center;
 	  display:flex;
-	
   }
 
   .contact-form-in{
@@ -301,11 +282,9 @@ button {
 	  align-items: center;
 	  justify-content:space-between;
 	  padding: 90px 130px 88px 148px;
-	  
-
   }
 
-  input[type=text],select,textarea{
+  input[type=text],textarea{
 	width: 100%;
 	padding: 12px;
 	border: 1px solid #ccc;
@@ -322,15 +301,8 @@ button {
 
   }
 
-  .container {
-	border-radius: 5px;
-	background-color: #f2f2f2;
-	padding: 20px;
-  }
-
-
   @media screen and (max-width: 600px) {
-	.wrap-input1, input[type=submit] {
+	.inputs{
 	  width: 100%;
 	  margin-top: 0;
 	}
@@ -338,38 +310,17 @@ button {
 
 
 
-  .container-contact1-form-btn{
-	margin-top: 20px;
-
-  }
-
-
-  .button {
-	display: inline-block;
-	border-radius: 6px;
-	background-color: #f4511e;
-	color: white;
-	text-align: center;
-	font-size: 28px;
-	padding: 20px;
-	width: 200px;
-	margin: 5px;
-
-  }
+  /*----------------------like-----------------------*/
 
 
  #like{
 	text-align: center;
 	border-spacing: 30px;
-	
-
   }
 
   .like table{
 	display: inline-block;
 	bottom: 0px;
-
-	
 
   }
 
@@ -397,6 +348,7 @@ button {
 
 }
 
+  /*----------------------QrCode-----------------------*/
 
 #qrcoder{
 	text-align: center;
@@ -407,4 +359,16 @@ button {
 }
 
 
-  
+  #ans,#ans th, #ans td{
+	  text-align: center;
+	  border: 1px solid black;
+	  border-collapse: collapse;
+	  
+	
+  }
+
+  table#ans{
+	  padding-top: 10px;
+	margin-left: auto; 
+	margin-right: auto;
+  }
